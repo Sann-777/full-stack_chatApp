@@ -25,7 +25,9 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app ./
 
 # Set environment variables
-ENV NODE_ENV=production
+ENV NODE_ENV=production \
+    PORT=5001
+
 
 # Expose port
 EXPOSE 5001
